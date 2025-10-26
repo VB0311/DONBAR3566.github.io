@@ -13,13 +13,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: #e5e7eb; /* primary text (light gray) */
   line-height: 1.6;
-  
+
   /* Subtle dark gradient background */
   background:
     radial-gradient(1200px 600px at 10% -10%, #111827 0%, transparent 40%),
     radial-gradient(1000px 500px at 110% 10%, #0b1220 0%, transparent 35%),
     linear-gradient(180deg, #0f172a, #0b1324 60%, #0a0f1e 100%);
-  
+
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
@@ -69,30 +69,45 @@ nav ul {
   flex-wrap: wrap;
 }
 
+/* =================== UPDATED: Nav link transitions (10/26/2025) =================== */
+/* Add background-color transition and hover background color (10/26/2025) */
 nav a {
   display: inline-block;
   padding: 0.35rem 0.5rem;
   border-radius: 0.5rem;
-  transition: color 120ms ease;
+  transition: color 120ms ease, background-color 200ms ease; /* added bg transition (10/26/2025) */
 }
+
 nav a:hover,
 nav a:focus-visible {
   color: #9ecbff; /* lighter hover blue */
+  background-color: rgba(96, 165, 250, 0.15); /* subtle hover chip (10/26/2025) */
 }
+/* ================= /UPDATED: Nav link transitions (10/26/2025) ==================== */
 
 main {
   width: min(960px, 92%);
   margin: 1.5rem auto 2.5rem;
 }
 
-section {
+/* Card sections for About, Projects, Contact (10/26/2025) */
+section.card {
   background: #111827; /* section background */
   border: 1px solid rgba(148, 163, 184, 0.25);
   box-shadow: 0 10px 20px rgba(0,0,0,0.35);
   border-radius: 14px;
   padding: 1.25rem 1.25rem;
   margin-block: 1.25rem;
+
+  /* =========== ADDED: Smooth zoom-on-hover (10/26/2025) =========== */
+  transform-origin: center;
+  transition: transform 200ms ease, box-shadow 200ms ease;
 }
+section.card:hover {
+  transform: scale(1.02); /* gentle zoom (10/26/2025) */
+  box-shadow: 0 16px 32px rgba(0,0,0,0.45);
+}
+/* ======= /ADDED: Smooth zoom-on-hover for all sections (10/26/2025) ======= */
 
 section h2 {
   margin-top: 0;
@@ -105,6 +120,62 @@ section p {
   color: #cbd5e1; /* secondary text */
   margin: 0.25rem 0 0.5rem;
 }
+
+/* ===================== ADDED: Table Styling (10/26/2025) ===================== */
+/* Full-width, bordered table with padding and header background (10/26/2025) */
+.projects-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  background: #0f172a; /* table body base */
+  overflow: hidden; /* keep rounded corners clean if you round the section */
+}
+
+.projects-table caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 600;
+  color: #e5e7eb;
+  padding: 0.5rem 0;
+}
+
+.projects-table thead th {
+  background: #0b1220; /* header background color */
+  color: #e5e7eb;
+  text-align: left;
+}
+
+.projects-table th,
+.projects-table td {
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  padding: 0.75rem;
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+/* Slight zebra striping for readability (optional) (10/26/2025) */
+.projects-table tbody tr:nth-child(even) td {
+  background: rgba(148, 163, 184, 0.06);
+}
+
+/* Image cell treatment (10/26/2025) */
+.projects-table td.image-cell {
+  text-align: center;
+}
+.projects-table td.image-cell img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+/* Apply lighter background to first and third columns using colgroup (10/26/2025) */
+.projects-table col.col-1,
+.projects-table col.col-3 {
+  background: rgba(148, 163, 184, 0.08); /* lighter column bg (10/26/2025) */
+}
+/* =================== /ADDED: Table Styling (10/26/2025) ===================== */
 
 footer {
   margin-top: auto;

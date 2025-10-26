@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <!--
-   Author: Donald Barbato
-   Date: 10/18/2025
-   Filename: index.html
-   -->
+  <!--
+    Author: Donald Barbato
+    Date: 10/18/2025
+    Filename: index.html
+  -->
   <meta charset="utf-8" />
-  
+
   <!-- Title displayed on the browser tab -->
   <title>Donald Barbato - HVAC Pricing & Data Analytics Professional</title>
-  
+
   <!-- Description of the webpage for search engines -->
   <meta name="description" content="Portfolio for Donald Barbato with About, Projects, and Contact sections." />
-  
+
   <!-- Keywords to help with search engine optimization -->
   <meta name="keywords" content="Donald Barbato, HVAC, Pricing, Data Analytics, SQL, Power BI, Excel, VBA" />
-  
+
   <!-- Author of the document -->
   <meta name="author" content="Donald Barbato" />
-  
+
   <!-- Viewport setting ensures mobile responsiveness -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Link to stylesheet -->
+  <!-- Link to stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -46,19 +46,68 @@
   <!-- Main section contains the main content of the webpage -->
   <main>
     <!-- About section provides a brief overview -->
-    <section id="about">
+    <section id="about" class="card">
       <h2>About</h2>
       <p>Donald Barbato is an HVAC Pricing & Data Analytics professional focused on practical analytics and process improvement.</p>
     </section>
 
-    <!-- Projects section highlights key work or academic projects -->
-    <section id="projects">
+    <!-- Projects section with a table of highlighted projects (10/26/2025) -->
+    <section id="projects" class="card">
       <h2>Projects</h2>
-      <p>Student projects include SQL schema design, Power BI dashboards, and Excel/VBA automation for pricing workflows.</p>
+
+      <!-- ===================== ADDED: Projects Table (10/26/2025) ===================== -->
+      <!-- Table displays two sample projects with name, description, and an image placeholder (10/26/2025) -->
+      <table class="projects-table" aria-describedby="projects-caption">
+        <!-- Title for the table (10/26/2025) -->
+        <caption id="projects-caption">Highlighted Projects</caption>
+
+        <!-- Color columns 1 and 3 via colgroup/col (lighter background) (10/26/2025) -->
+        <colgroup>
+          <col class="col-1">
+          <col class="col-2">
+          <col class="col-3">
+        </colgroup>
+
+        <!-- Column headers (10/26/2025) -->
+        <thead>
+          <tr>
+            <th scope="col">Project Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Image</th>
+          </tr>
+        </thead>
+
+        <!-- Two rows (SQL Schema; Excel/VBA Automation) (10/26/2025) -->
+        <tbody>
+          <tr>
+            <td>SQL Schema Design</td>
+            <td>Structuring relational databases with well-defined tables, keys, and relationships to ensure data integrity and efficient querying.</td>
+            <td class="image-cell">
+              <!-- Dummy image placeholder (use an actual file named placeholder.jpg in your project root) (10/26/2025) -->
+              <img src="placeholder.jpg" alt="SQL Schema Design - placeholder graphic" width="160" height="100">
+            </td>
+          </tr>
+          <tr>
+            <td>Excel/VBA Automation</td>
+            <td>Developing macros and automated tools in Excel to streamline data entry, pricing updates, and report generation with minimal manual effort.</td>
+            <td class="image-cell">
+              <img src="placeholder.jpg" alt="Excel/VBA Automation - placeholder graphic" width="160" height="100">
+            </td>
+          </tr>
+        </tbody>
+
+        <!-- Footer row (optional message) (10/26/2025) -->
+        <tfoot>
+          <tr>
+            <td colspan="3">More projects coming soon.</td>
+          </tr>
+        </tfoot>
+      </table>
+      <!-- =================== /ADDED: Projects Table (10/26/2025) ====================== -->
     </section>
 
     <!-- Contact section provides communication information -->
-    <section id="contact">
+    <section id="contact" class="card">
       <h2>Contact</h2>
       <p>For inquiries, please email contact@example.com.</p>
     </section>

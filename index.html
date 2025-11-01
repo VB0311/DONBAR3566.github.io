@@ -111,6 +111,49 @@
       <h2>Contact</h2>
       <p>For inquiries, please email contact@example.com.</p>
     </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+
+      <form class="contact-form" action="#" method="post">
+        <div class="contact-grid">
+          <div class="form-row">
+            <label for="sender-name">Your Name <span aria-hidden="true">*</span></label>
+            <div class="control">
+              <input type="text" id="sender-name" name="name" placeholder="FirstName LastName" required aria-required="true">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="sender-email">Email Address <span aria-hidden="true">*</span></label>
+            <div class="control">
+              <input type="email" id="sender-email" name="email" placeholder="name@example.com" required aria-required="true">
+            </div>
+          </div>
+
+          <div class="form-row form-row--full">
+            <label for="subject">Subject</label>
+            <div class="control">
+              <input type="text" id="subject" name="subject" placeholder="Provide a brief description of how I can help you.">
+            </div>
+          </div>
+
+          <div class="form-row form-row--full">
+            <label for="message">Message</label>
+            <div class="control">
+              <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row form-row--full">
+          <div class="control">
+            <input id="submit-contact" type="submit" value="Send Message">
+          </div>
+        </div>
+      </form>
+    </section>
   </main>
 
   <!-- Footer section includes copyright information -->

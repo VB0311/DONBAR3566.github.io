@@ -186,3 +186,68 @@ footer {
   padding: 1rem;
   border-top: 1px solid rgba(148, 163, 184, 0.25);
 }
+
+/* ================= Contact Form ================= */
+.contact-form {
+  gap: 0.9rem;                 /* slightly tighter vertical rhythm */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2%;                /* row gap, then column gap */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;      /* keep label ABOVE input on all sizes */
+  gap: 0.5rem;
+  flex: 1 1 100%;              /* full width on mobile */
+  box-sizing: border-box;
+}
+
+.form-row--full {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+/* Make sure fields never poke out of the card */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Two-column desktop like the original; subject/message full-width */
+@media (min-width: 1024px) {
+  .contact-grid .form-row {
+    flex: 1 1 48%;
+    max-width: 48%;
+  }
+  .contact-grid .form-row--full {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .form-row { 
+    flex-direction: column;    /* labels stay on top */
+    align-items: stretch;
+  }
+  .form-row label { width: auto; }
+  .form-row .control { flex: none; }
+}
+
+/* Left-align the submit button like the original */
+.contact-form > .form-row:last-child {
+  align-items: flex-start;
+}
+
+input[type="submit"] {
+  margin-top: 0.25rem;         /* tuck button closer to the textarea */
+}
